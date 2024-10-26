@@ -1,5 +1,5 @@
 {
-  "name": "@swd/eslint-config",
+  "name": "swd-eslint-config",
   "version": "1.0.1",
   "description": "Custom ESLint config",
   "type": "module",
