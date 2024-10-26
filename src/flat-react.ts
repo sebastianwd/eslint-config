@@ -35,6 +35,13 @@ export const react = tseslint.config(
     rules: {
       "react/prop-types": "off",
       "react/display-name": "warn",
+      "tailwindcss/no-custom-classname": [
+        "warn",
+        {
+          callees: ["classnames", "clsx", "cva", "twMerge", "cn"],
+          ignoredKeys: ["color", "variant", "size", "defaultVariants"],
+        },
+      ],
     },
   },
   {
