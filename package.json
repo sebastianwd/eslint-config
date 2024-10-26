@@ -21,6 +21,9 @@
     "release": "changeset",
     "release:publish": "pnpm build && changeset publish --provenance --access public"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "eslint",
     "eslintconfig",
