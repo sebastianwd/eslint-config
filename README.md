@@ -4,7 +4,7 @@ This is a custom eslint config for my projects. It uses the latest flat config v
 
 - Usage:
 
-  - Install: `pnpm add -D swd-eslint-config`
+  - Install: `pnpm add -D eslint prettier typescript-eslint swd-eslint-config`
   - In your `eslint.config.mjs`:
 
     ```ts
@@ -27,6 +27,25 @@ This is a custom eslint config for my projects. It uses the latest flat config v
     });
     ```
 
+- Create a prettier config. Example:
+
+  `prettier.config.mjs`
+
+  ```js
+  /** @type {import("prettier").Config} */
+  export default {
+    endOfLine: "lf", // consistency between windows and linux
+    semi: false,
+    singleQuote: true,
+    jsxSingleQuote: true,
+    tabWidth: 2,
+    trailingComma: "es5",
+    lineWidth: 120,
+  };
+  ```
+
+```
+
 - Plugins included:
   - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
   - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
@@ -35,3 +54,4 @@ This is a custom eslint config for my projects. It uses the latest flat config v
   - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort)
   - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks)
   - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin)
+```
