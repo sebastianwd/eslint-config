@@ -35,6 +35,7 @@ export const react = tseslint.config(
     rules: {
       "react/prop-types": "off",
       "react/display-name": "warn",
+      "react/button-has-type": "warn",
       "tailwindcss/no-custom-classname": [
         "warn",
         {
