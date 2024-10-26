@@ -17,7 +17,9 @@
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "scripts": {
-    "build": "tsup src"
+    "build": "tsup src",
+    "release": "changeset",
+    "release:publish": "pnpm build && changeset publish --provenance --access public"
   },
   "keywords": [
     "eslint",
