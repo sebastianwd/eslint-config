@@ -1,5 +1,12 @@
 # @swd/eslint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- 95767dd: add tailwind rule
+- 6965cb2: fix extension build
+
 ## 1.0.1
 
 ### Patch Changes
