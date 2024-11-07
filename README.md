@@ -24,7 +24,9 @@ This is a custom eslint config for my projects. It uses the latest flat config v
       },
       ...swdEslintPlugin.configs.base,
       // if using React:
-      ...swdEslintPlugin.configs.react
+      ...swdEslintPlugin.configs.react(
+        { framework: "next" } // optional
+      )
     );
     ```
 
@@ -43,7 +45,9 @@ This is a custom eslint config for my projects. It uses the latest flat config v
       extends: [
         ...swdEslintPlugin.configs.base,
         // if using React:
-        ...swdEslintPlugin.configs.react,
+        ...swdEslintPlugin.configs.react(
+          { framework: "next" } // optional
+        ),
       ],
     });
     ```
