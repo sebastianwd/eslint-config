@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.1.4
+
+### Patch Changes
+
+- a2359b7: add nextjs optional plugin
+
 ## 1.1.3
 
 ### Patch Changes
