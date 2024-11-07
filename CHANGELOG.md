@@ -1,5 +1,13 @@
 # @swd/eslint-config
 
+## 1.1.3
+
+### Patch Changes
+
+- 5f639ce: updated deps
+- bb8117a: update no-misused-promises rule
+- 5441057: add repo url to package.json
+
 ## 1.1.2
 
 ### Patch Changes
