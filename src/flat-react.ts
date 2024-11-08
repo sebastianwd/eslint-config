@@ -13,8 +13,6 @@ export interface ReactPluginOptions {
   framework?: "next";
 }
 
-console.log(nextPlugin.configs["core-web-vitals"]);
-
 const eslintNext = compat.config(nextPlugin.configs["core-web-vitals"]);
 
 export const react = ({ framework }: ReactPluginOptions) =>
