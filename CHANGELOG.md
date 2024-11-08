@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.1.5
+
+### Patch Changes
+
+- 2a6feed: remove console log
+
 ## 1.1.4
 
 ### Patch Changes
