@@ -18,8 +18,6 @@ const eslintTailwind = pluginTailwindcss.configs["flat/recommended"];
 
 const eslintExpo = compat.extends("eslint-config-expo");
 
-console.log("eslintExpo", eslintExpo);
-
 export const react = ({ framework }: ReactPluginOptions) =>
   tseslint.config(
     {
