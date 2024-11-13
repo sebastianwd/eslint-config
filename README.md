@@ -69,6 +69,16 @@ This is a custom eslint config for my projects. It uses the latest flat config v
   };
   ```
 
+- If using Expo, `eslint-config-expo` uses outdated versions, so you need to add the following to your `package.json`:
+
+  ```json
+    "pnpm": {
+      "overrides": {
+        "eslint-plugin-react-hooks": "^5.0.0"
+      }
+    }
+  ```
+
 ### Plugins included:
 
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
