@@ -43,6 +43,7 @@
     "@types/eslint-plugin-jsx-a11y": "^6.9.0",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/eslint__eslintrc": "^2.1.2",
+    "eslint": "^9.14.0",
     "prettier": "^3.3.3",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
@@ -53,6 +54,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.14.0",
     "@next/eslint-plugin-next": "^15.0.2",
+    "eslint-config-expo": "^8.0.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.2.1",
@@ -63,7 +65,13 @@
     "typescript-eslint": "^8.13.0"
   },
   "peerDependencies": {
+    "eslint": "^9.0.0",
     "prettier": "^3.0.0",
     "typescript": "^5.6.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint-plugin-react-hooks": "^5.0.0"
+    }
   }
 }

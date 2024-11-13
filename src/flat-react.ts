@@ -10,10 +10,15 @@ import reactHooks from "eslint-plugin-react-hooks";
 const compat = new FlatCompat();
 
 export interface ReactPluginOptions {
-  framework?: "next";
+  framework?: "next" | "expo";
 }
 
 const eslintNext = compat.config(nextPlugin.configs["core-web-vitals"]);
+const eslintTailwind = pluginTailwindcss.configs["flat/recommended"];
+
+const eslintExpo = compat.extends("eslint-config-expo");
+
+console.log("eslintExpo", eslintExpo);
 
 export const react = ({ framework }: ReactPluginOptions) =>
   tseslint.config(
@@ -26,6 +31,7 @@ export const react = ({ framework }: ReactPluginOptions) =>
         pluginReact.configs.flat["jsx-runtime"],
         ...compat.config(reactHooks.configs.recommended),
         ...pluginTailwindcss.configs["flat/recommended"],
+        ...(framework === "expo" ? eslintExpo : eslintTailwind),
         ...(framework === "next" ? eslintNext : []),
       ],
       languageOptions: {
