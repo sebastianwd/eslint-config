@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.2.0
+
+### Minor Changes
+
+- f4d2d7a: add expo config
+
 ## 1.1.5
 
 ### Patch Changes
