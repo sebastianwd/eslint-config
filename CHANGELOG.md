@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.2.3
+
+### Patch Changes
+
+- f04705b: add astro support and format code
+
 ## 1.2.2
 
 ### Patch Changes
