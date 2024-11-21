@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.2.2
+
+### Patch Changes
+
+- f13bf62: add rules
+
 ## 1.2.1
 
 ### Patch Changes
