@@ -14,8 +14,8 @@ export interface ReactPluginOptions {
   framework?: 'next' | 'expo' | 'astro'
 }
 
-const eslintNext = compat.config(nextPlugin.configs['core-web-vitals'])
-const eslintExpo = compat.extends('eslint-config-expo')
+const eslintNext = () => compat.config(nextPlugin.configs['core-web-vitals'])
+const eslintExpo = () => compat.extends('eslint-config-expo')
 const eslintAstro = eslintPluginAstro.configs.recommended
 
 const eslintTailwind = pluginTailwindcss.configs['flat/recommended']
@@ -30,8 +30,8 @@ export const react = ({ framework }: ReactPluginOptions) =>
         // @ts-expect-error - See above
         pluginReact.configs.flat['jsx-runtime'],
         ...compat.config(reactHooks.configs.recommended),
-        ...(framework === 'expo' ? eslintExpo : eslintTailwind),
-        ...(framework === 'next' ? eslintNext : []),
+        ...(framework === 'expo' ? eslintExpo() : eslintTailwind),
+        ...(framework === 'next' ? eslintNext() : []),
         ...(framework === 'astro' ? eslintAstro : []),
       ],
       languageOptions: {
