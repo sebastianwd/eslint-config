@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.2.4
+
+### Patch Changes
+
+- d74c3c1: lazy load configs
+
 ## 1.2.3
 
 ### Patch Changes
