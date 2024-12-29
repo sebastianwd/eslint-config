@@ -20,19 +20,17 @@ const eslintAstro = eslintPluginAstro.configs.recommended
 
 const eslintTailwind = pluginTailwindcss.configs['flat/recommended']
 
-export const react = ({ framework }: ReactPluginOptions) =>
+export const react = (options?: ReactPluginOptions) =>
   tseslint.config(
     {
       files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
       extends: [
-        // @ts-expect-error - Types are broken in eslint-plugin-react https://github.com/jsx-eslint/eslint-plugin-react/issues/3838
-        pluginReact.configs.flat.recommended,
-        // @ts-expect-error - See above
-        pluginReact.configs.flat['jsx-runtime'],
+        pluginReact.configs.flat!.recommended!,
+        pluginReact.configs.flat?.['jsx-runtime']!,
         ...compat.config(reactHooks.configs.recommended),
-        ...(framework === 'expo' ? eslintExpo() : eslintTailwind),
-        ...(framework === 'next' ? eslintNext() : []),
-        ...(framework === 'astro' ? eslintAstro : []),
+        ...(options?.framework === 'expo' ? eslintExpo() : eslintTailwind),
+        ...(options?.framework === 'next' ? eslintNext() : []),
+        ...(options?.framework === 'astro' ? eslintAstro : []),
       ],
       languageOptions: {
         parserOptions: {

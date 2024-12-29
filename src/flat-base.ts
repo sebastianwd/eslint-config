@@ -32,6 +32,7 @@ export const base = tseslint.config({
         checksVoidReturn: false,
       },
     ],
+    // these no-unsafe rules are buggy
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
