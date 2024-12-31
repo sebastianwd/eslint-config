@@ -26,6 +26,7 @@ export const base = tseslint.config({
     '@typescript-eslint/no-empty-object-type': 'warn',
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-unnecessary-condition': 'error',
     '@typescript-eslint/no-misused-promises': [
       'warn',
       {
