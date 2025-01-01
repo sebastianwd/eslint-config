@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.4.1
+
+### Patch Changes
+
+- 98b1f19: disable next.js img rule
+
 ## 1.4.0
 
 ### Minor Changes
