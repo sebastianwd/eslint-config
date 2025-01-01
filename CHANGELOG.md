@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.4.0
+
+### Minor Changes
+
+- 1095a1c: add no-unnecessary-condition rule
+
 ## 1.3.0
 
 ### Minor Changes
