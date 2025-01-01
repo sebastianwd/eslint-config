@@ -48,6 +48,11 @@ export const react = (options?: ReactPluginOptions) =>
         'react/prop-types': 'off',
         'react/display-name': 'warn',
         'react/button-has-type': 'warn',
+        ...(options?.framework === 'next'
+          ? {
+              '@next/next/no-img-element': 'off',
+            }
+          : {}),
         'tailwindcss/no-custom-classname': [
           'warn',
           {
