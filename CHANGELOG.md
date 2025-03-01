@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 1.5.0
+
+### Minor Changes
+
+- 1f7e762: update deps
+
 ## 1.4.1
 
 ### Patch Changes
