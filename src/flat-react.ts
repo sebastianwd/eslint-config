@@ -1,7 +1,6 @@
-import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 import pluginReact from 'eslint-plugin-react'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-import tseslint from 'typescript-eslint'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
 import nextPlugin from '@next/eslint-plugin-next'
 import pluginTailwindcss from 'eslint-plugin-tailwindcss'
 import { FlatCompat } from '@eslint/eslintrc'
@@ -20,7 +19,7 @@ const eslintAstro = eslintPluginAstro.configs.recommended
 
 const eslintTailwind = pluginTailwindcss.configs['flat/recommended']
 
-export const react = (options?: ReactPluginOptions) =>
+export const react = (options?: ReactPluginOptions): ConfigArray =>
   tseslint.config(
     {
       files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
@@ -71,4 +70,4 @@ export const react = (options?: ReactPluginOptions) =>
       ],
       extends: [jsxA11y.flatConfigs.recommended],
     }
-  ) satisfies FlatConfig.ConfigArray
+  )

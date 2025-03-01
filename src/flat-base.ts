@@ -1,10 +1,9 @@
-import tseslint from 'typescript-eslint'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
 import eslint from '@eslint/js'
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
-export const base = tseslint.config({
+export const base: ConfigArray = tseslint.config({
   files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
   extends: [
     eslint.configs.recommended,
@@ -48,4 +47,4 @@ export const base = tseslint.config({
       },
     ],
   },
-}) satisfies FlatConfig.ConfigArray
+})
