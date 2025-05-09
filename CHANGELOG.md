@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- eefd59c: support tailwind eslint for v4
+
 ## 1.5.0
 
 ### Minor Changes
