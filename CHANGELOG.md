@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.0.1
+
+### Patch Changes
+
+- 7378353: fix tw path function
+
 ## 2.0.0
 
 ### Major Changes
