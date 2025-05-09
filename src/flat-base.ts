@@ -13,6 +13,7 @@ export const base: ConfigArray = tseslint.config({
   languageOptions: {
     parser: tseslint.parser,
     parserOptions: {
+      project: ['./tsconfig.json'],
       extraFileExtensions: ['.json', '.d.ts'],
     },
   },
