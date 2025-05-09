@@ -6,11 +6,15 @@ import pluginTailwindcss from 'eslint-plugin-tailwindcss'
 import { FlatCompat } from '@eslint/eslintrc'
 import reactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginAstro from 'eslint-plugin-astro'
+import { findTailwindImportCss } from './utils/find-tailwind-config'
 
 const compat = new FlatCompat()
 
 export interface ReactPluginOptions {
   framework?: 'next' | 'expo' | 'astro'
+  tailwind?: {
+    ignoredKeys?: string[]
+  }
 }
 
 const eslintNext = () => compat.config(nextPlugin.configs['core-web-vitals'])
@@ -32,7 +36,9 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
         ...(options?.framework === 'astro' ? eslintAstro : []),
       ],
       languageOptions: {
+        parser: tseslint.parser,
         parserOptions: {
+          project: ['./tsconfig.json'],
           ecmaFeatures: {
             jsx: true,
           },
@@ -41,6 +47,9 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
       settings: {
         react: {
           version: 'detect',
+        },
+        tailwindcss: {
+          config: findTailwindImportCss(process.cwd()),
         },
       },
       rules: {
@@ -56,7 +65,9 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
           'warn',
           {
             callees: ['classnames', 'clsx', 'cva', 'twMerge', 'cn'],
-            ignoredKeys: ['color', 'variant', 'size', 'defaultVariants'],
+            ignoredKeys: ['color', 'variant', 'size', 'defaultVariants'].concat(
+              options?.tailwind?.ignoredKeys ?? []
+            ),
           },
         ],
       },
