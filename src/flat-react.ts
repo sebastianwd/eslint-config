@@ -12,9 +12,11 @@ const compat = new FlatCompat()
 
 export interface ReactPluginOptions {
   framework?: 'next' | 'expo' | 'astro'
-  tailwind?: {
-    ignoredKeys?: string[]
-  }
+  tailwind?:
+    | {
+        ignoredKeys?: string[]
+      }
+    | false
 }
 
 const eslintNext = () => compat.config(nextPlugin.configs['core-web-vitals'])
@@ -31,9 +33,10 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
         pluginReact.configs.flat!.recommended!,
         pluginReact.configs.flat?.['jsx-runtime']!,
         ...compat.config(reactHooks.configs.recommended),
-        ...(options?.framework === 'expo' ? eslintExpo() : eslintTailwind),
+        ...(options?.framework === 'expo' ? eslintExpo() : []),
         ...(options?.framework === 'next' ? eslintNext() : []),
         ...(options?.framework === 'astro' ? eslintAstro : []),
+        ...(options?.tailwind === false ? [] : eslintTailwind),
       ],
       languageOptions: {
         parser: tseslint.parser,
@@ -48,9 +51,13 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
         react: {
           version: 'detect',
         },
-        tailwindcss: {
-          config: findTailwindImportCss(process.cwd()),
-        },
+        ...(options?.tailwind === false
+          ? {}
+          : {
+              tailwindcss: {
+                config: findTailwindImportCss(process.cwd()),
+              },
+            }),
       },
       rules: {
         'react/prop-types': 'off',
@@ -61,15 +68,22 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
               '@next/next/no-img-element': 'off',
             }
           : {}),
-        'tailwindcss/no-custom-classname': [
-          'warn',
-          {
-            callees: ['classnames', 'clsx', 'cva', 'twMerge', 'cn'],
-            ignoredKeys: ['color', 'variant', 'size', 'defaultVariants'].concat(
-              options?.tailwind?.ignoredKeys ?? []
-            ),
-          },
-        ],
+        ...(options?.tailwind === false
+          ? {}
+          : {
+              'tailwindcss/no-custom-classname': [
+                'warn',
+                {
+                  callees: ['classnames', 'clsx', 'cva', 'twMerge', 'cn'],
+                  ignoredKeys: [
+                    'color',
+                    'variant',
+                    'size',
+                    'defaultVariants',
+                  ].concat(options?.tailwind?.ignoredKeys ?? []),
+                },
+              ],
+            }),
       },
     },
     {

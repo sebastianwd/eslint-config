@@ -4,52 +4,34 @@ This is a custom eslint config for my projects. It uses the latest flat config v
 
 - Usage:
 
-  - Install: `pnpm add -D eslint prettier typescript-eslint swd-eslint-config`
-  - In your `eslint.config.mjs`:
+  - Install: `pnpm add -D eslint prettier typescript-eslint swd-eslint-config jiti`
+  - In your `eslint.config.ts`:
 
     ```ts
-    import swdEslintPlugin from "swd-eslint-config";
-    import tseslint from "typescript-eslint";
+    import swdEslintPlugin from 'swd-eslint-config'
+    import tseslint from 'typescript-eslint'
 
     export default tseslint.config(
-      {
-        languageOptions: {
-          parserOptions: {
-            // Important for typed linting
-            parser: tseslint.parser,
-            tsconfigRootDir: import.meta.dirname,
-            project: ["./tsconfig.json"],
-          },
-        },
-      },
       ...swdEslintPlugin.configs.base,
       // if using React:
       ...swdEslintPlugin.configs.react(
-        { framework: "next" } // optional
+        { framework: 'next' } // optional
       )
-    );
+    )
     ```
 
     or the flat config with classic syntax:
 
     ```ts
     export default tseslint.config({
-      languageOptions: {
-        parserOptions: {
-          // Important for typed linting
-          parser: tseslint.parser,
-          tsconfigRootDir: import.meta.dirname,
-          project: ["./tsconfig.json"],
-        },
-      },
       extends: [
         ...swdEslintPlugin.configs.base,
         // if using React:
         ...swdEslintPlugin.configs.react(
-          { framework: "next" } // optional
+          { framework: 'next' } // optional
         ),
       ],
-    });
+    })
     ```
 
 - Create a prettier config. Example:
@@ -59,14 +41,23 @@ This is a custom eslint config for my projects. It uses the latest flat config v
   ```js
   /** @type {import("prettier").Config} */
   export default {
-    endOfLine: "lf", // consistency between windows and linux
+    endOfLine: 'lf', // consistency between windows and linux
     semi: false,
     singleQuote: true,
     jsxSingleQuote: true,
     tabWidth: 2,
-    trailingComma: "es5",
+    trailingComma: 'es5',
     lineWidth: 120,
-  };
+  }
+  ```
+
+### Troubleshooting
+
+- If it doesn't work, try adding this to the `.npmrc` file:
+
+  ```sh
+  auto-install-peers = true
+  public-hoist-pattern[]=*eslint*
   ```
 
 - If using Expo, `eslint-config-expo` uses outdated versions, so you need to add the following to your `package.json`:
@@ -83,7 +74,7 @@ This is a custom eslint config for my projects. It uses the latest flat config v
 
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
-- [eslint-plugin-tailwindcss](https://github.com/tailwindlabs/eslint-plugin-tailwindcss)
+- [eslint-plugin-tailwindcss (experimental for tailwind v4)](https://github.com/hyoban/eslint-plugin-tailwindcss/pull/3)
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
 - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks)
