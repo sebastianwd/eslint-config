@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.0.2
+
+### Patch Changes
+
+- bc8df2d: make tailwind config optional
+
 ## 2.0.1
 
 ### Patch Changes
