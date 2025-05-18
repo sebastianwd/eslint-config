@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.0.3
+
+### Patch Changes
+
+- a22e085: update deps and apply eslint to package
+
 ## 2.0.2
 
 ### Patch Changes
