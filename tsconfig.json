@@ -10,6 +10,7 @@
     },
     "include": [
         "src",
-        "eslint.config.ts",
+        "*.ts",
+        "*.mjs"
     ]
 }
