@@ -7,5 +7,9 @@
             "./src/types",
             "./node_modules/@types"
         ]
-    }
+    },
+    "include": [
+        "src",
+        "eslint.config.ts",
+    ]
 }

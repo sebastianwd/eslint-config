@@ -1,11 +1,12 @@
-import pluginReact from 'eslint-plugin-react'
-import jsxA11y from 'eslint-plugin-jsx-a11y'
-import tseslint, { type ConfigArray } from 'typescript-eslint'
-import nextPlugin from '@next/eslint-plugin-next'
-import pluginTailwindcss from 'eslint-plugin-tailwindcss'
 import { FlatCompat } from '@eslint/eslintrc'
-import reactHooks from 'eslint-plugin-react-hooks'
+import nextPlugin from '@next/eslint-plugin-next'
 import eslintPluginAstro from 'eslint-plugin-astro'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import pluginReact, { type ReactFlatConfig } from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import pluginTailwindcss from 'eslint-plugin-tailwindcss'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
+
 import { findTailwindImportCss } from './utils/find-tailwind-config'
 
 const compat = new FlatCompat()
@@ -30,8 +31,8 @@ export const react = (options?: ReactPluginOptions): ConfigArray =>
     {
       files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
       extends: [
-        pluginReact.configs.flat!.recommended!,
-        pluginReact.configs.flat?.['jsx-runtime']!,
+        pluginReact.configs.flat.recommended!,
+        pluginReact.configs.flat['jsx-runtime'] as ReactFlatConfig,
         ...compat.config(reactHooks.configs.recommended),
         ...(options?.framework === 'expo' ? eslintExpo() : []),
         ...(options?.framework === 'next' ? eslintNext() : []),

@@ -22,7 +22,7 @@ export function findTailwindImportCss(dir: string): string | null {
     } else if (entry.isFile() && entry.name.endsWith('.css')) {
       // read & scan lines
       const lines = fs.readFileSync(fullPath, 'utf8').split(/\r?\n/)
-      for (let line of lines) {
+      for (const line of lines) {
         if (
           line.trim().startsWith('@import "tailwindcss') ||
           line.trim().startsWith(`@import 'tailwindcss`)

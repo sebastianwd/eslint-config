@@ -1,7 +1,7 @@
-import tseslint, { type ConfigArray } from 'typescript-eslint'
 import eslint from '@eslint/js'
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
 
 export const base: ConfigArray = tseslint.config({
   files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
