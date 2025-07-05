@@ -51,7 +51,7 @@ export const react = (options: ReactPluginOptions = {}): ConfigArray => {
           version: 'detect',
         },
         'better-tailwindcss': {
-          entryPoint: `./src/global.css`,
+          entryPoint: './src/global.css',
         },
       },
       rules: {
