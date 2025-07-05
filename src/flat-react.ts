@@ -50,6 +50,9 @@ export const react = (options: ReactPluginOptions = {}): ConfigArray => {
         react: {
           version: 'detect',
         },
+        'better-tailwindcss': {
+          entryPoint: `./src/global.css`,
+        },
       },
       rules: {
         ...eslintPluginBetterTailwindcss.configs['recommended-warn']?.rules,
