@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.1
+
+### Patch Changes
+
+- fc409fe: add rule
+
 ## 2.1.0
 
 ### Minor Changes
