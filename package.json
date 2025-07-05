@@ -41,31 +41,32 @@
   "author": "Sebastian L",
   "license": "MIT",
   "devDependencies": {
-    "@changesets/cli": "^2.29.4",
+    "@changesets/cli": "^2.29.5",
     "@types/eslint-plugin-jsx-a11y": "^6.10.0",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/node": "22.15.18",
-    "eslint": "^9.27.0",
+    "eslint": "^9.30.1",
     "npm-check-updates": "^18.0.1",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@eslint/compat": "^1.2.9",
+    "@eslint/compat": "^1.3.1",
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.27.0",
-    "@next/eslint-plugin-next": "^15.3.2",
+    "@eslint/js": "^9.30.1",
+    "@next/eslint-plugin-next": "^15.3.5",
+    "@tanstack/eslint-plugin-query": "^5.81.2",
     "eslint-config-expo": "^9.2.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-better-tailwindcss": "^3.4.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-tailwindcss": "npm:@hyoban/eslint-plugin-tailwindcss@4.0.0-alpha.12",
-    "typescript-eslint": "^8.32.1"
+    "typescript-eslint": "^8.35.1"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
@@ -77,5 +78,5 @@
       "eslint-plugin-react-hooks": "^5.2.0"
     }
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.12.4"
 }
