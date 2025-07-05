@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.3
+
+### Patch Changes
+
+- b518211: turn off rule
+
 ## 2.1.2
 
 ### Patch Changes
