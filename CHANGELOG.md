@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.2
+
+### Patch Changes
+
+- df1e915: force release
+
 ## 2.1.1
 
 ### Patch Changes
