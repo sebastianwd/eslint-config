@@ -1,5 +1,15 @@
 # @swd/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- 53a153f: add new tailwind and tanstack plugins
+
+### Patch Changes
+
+- a22e085: update deps and apply eslint to package
+
 ## 2.0.2
 
 ### Patch Changes
