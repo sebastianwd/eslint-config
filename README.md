@@ -74,10 +74,11 @@ This is a custom eslint config for my projects. It uses the latest flat config v
 
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
-- [eslint-plugin-tailwindcss (experimental for tailwind v4)](https://github.com/hyoban/eslint-plugin-tailwindcss/pull/3)
+- [eslint-plugin-better-tailwindcss](https://github.com/schoero/eslint-plugin-better-tailwindcss)
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
 - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks)
+- [@tanstack/eslint-plugin-query](https://github.com/TanStack/query/blob/main/docs/eslint/eslint-plugin-query.md)
 - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin)
 
 ### Commands
