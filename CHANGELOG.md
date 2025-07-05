@@ -1,5 +1,12 @@
 # @swd/eslint-config
 
+## 2.1.1
+
+### Patch Changes
+
+- fc409fe: add rule
+- 396d8bd: add tailwind plugin setting
+
 ## 2.1.0
 
 ### Minor Changes
