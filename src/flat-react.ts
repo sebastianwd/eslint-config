@@ -53,6 +53,10 @@ export const react = (options: ReactPluginOptions = {}): ConfigArray => {
       },
       rules: {
         ...eslintPluginBetterTailwindcss.configs['recommended-warn']?.rules,
+        'react/jsx-curly-brace-presence': [
+          'error',
+          { props: 'never', children: 'never' },
+        ],
         'react/prop-types': 'off',
         'react/display-name': 'warn',
         'react/button-has-type': 'warn',
