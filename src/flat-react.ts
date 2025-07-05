@@ -56,6 +56,7 @@ export const react = (options: ReactPluginOptions = {}): ConfigArray => {
       },
       rules: {
         ...eslintPluginBetterTailwindcss.configs['recommended-warn']?.rules,
+        'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
         'react/jsx-curly-brace-presence': [
           'error',
           { props: 'never', children: 'never' },
