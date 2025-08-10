@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.5
+
+### Patch Changes
+
+- e5fee29: fix tsconfig dir stuff
+
 ## 2.1.4
 
 ### Patch Changes
