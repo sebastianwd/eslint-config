@@ -14,7 +14,7 @@ export const base: ConfigArray = tseslint.config({
     parser: tseslint.parser,
     parserOptions: {
       projectService: true,
-      tsconfigRootDir: process.cwd(),
+      tsconfigRootDir: __dirname,
       extraFileExtensions: ['.json', '.d.ts'],
     },
   },
