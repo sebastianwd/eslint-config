@@ -37,7 +37,8 @@ export const react = (options: ReactPluginOptions = {}): ConfigArray => {
       languageOptions: {
         parser: tseslint.parser,
         parserOptions: {
-          project: ['./tsconfig.json'],
+          projectService: true,
+          tsconfigRootDir: process.cwd(),
           ecmaFeatures: {
             jsx: true,
           },

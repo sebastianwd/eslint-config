@@ -2,14 +2,13 @@
     "extends": "./tsconfig.build.json",
     "compilerOptions": {
         "composite": false,
-        "rootDir": ".",
         "typeRoots": [
             "./src/types",
             "./node_modules/@types"
         ]
     },
     "include": [
-        "src",
+        "src/**/*",
         "*.ts",
         "*.mjs"
     ]
