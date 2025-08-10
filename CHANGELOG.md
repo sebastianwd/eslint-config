@@ -1,5 +1,12 @@
 # @swd/eslint-config
 
+## 2.1.3
+
+### Patch Changes
+
+- b518211: turn off rule
+- 1dd8e21: update deps
+
 ## 2.1.2
 
 ### Patch Changes
