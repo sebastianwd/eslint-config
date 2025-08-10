@@ -22,7 +22,8 @@
         "noEmit": true,
         "lib": [
             "es2022",
-            "DOM"
+            "DOM",
+            "dom.iterable"
         ],
     },
     "include": [
