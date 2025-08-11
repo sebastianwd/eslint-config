@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.6
+
+### Patch Changes
+
+- 032e358: fix dirname
+
 ## 2.1.5
 
 ### Patch Changes
