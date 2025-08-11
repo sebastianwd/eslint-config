@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.7
+
+### Patch Changes
+
+- 21329c6: fix
+
 ## 2.1.6
 
 ### Patch Changes
