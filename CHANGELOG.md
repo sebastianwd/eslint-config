@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.1.8
+
+### Patch Changes
+
+- 058a442: Fix project service issues
+
 ## 2.1.7
 
 ### Patch Changes
