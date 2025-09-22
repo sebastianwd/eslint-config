@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- 5a9b0de: update all deps to latest
+
 ## 2.1.8
 
 ### Patch Changes
