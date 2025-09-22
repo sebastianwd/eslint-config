@@ -1,9 +1,11 @@
 import eslint from '@eslint/js'
+import { type Linter } from 'eslint'
+import { defineConfig } from 'eslint/config'
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import tseslint, { type ConfigArray } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
-export const base: ConfigArray = tseslint.config({
+export const base: Linter.Config[] = defineConfig({
   files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
   extends: [
     eslint.configs.recommended,

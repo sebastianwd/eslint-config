@@ -1,12 +1,14 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import nextPlugin from '@next/eslint-plugin-next'
 import pluginQuery from '@tanstack/eslint-plugin-query'
+import { type Linter } from 'eslint'
+import { defineConfig } from 'eslint/config'
 import eslintPluginAstro from 'eslint-plugin-astro'
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import pluginReact, { type ReactFlatConfig } from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
-import tseslint, { type ConfigArray } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
 const compat = new FlatCompat()
 
@@ -19,10 +21,10 @@ const eslintNext = () => compat.config(nextPlugin.configs['core-web-vitals'])
 const eslintExpo = () => compat.extends('eslint-config-expo')
 const eslintAstro = eslintPluginAstro.configs.recommended
 
-export const react = (options: ReactPluginOptions = {}): ConfigArray => {
+export const react = (options: ReactPluginOptions = {}): Linter.Config[] => {
   const { framework, tanstack = true } = options
 
-  return tseslint.config(
+  return defineConfig(
     {
       files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
       extends: [
