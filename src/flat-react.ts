@@ -1,6 +1,7 @@
 import pluginQuery from '@tanstack/eslint-plugin-query'
 import { type Linter } from 'eslint'
 import { defineConfig } from 'eslint/config'
+// @ts-expect-error types are not exported
 import expoConfig from 'eslint-config-expo/flat'
 import eslintPluginAstro from 'eslint-plugin-astro'
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
