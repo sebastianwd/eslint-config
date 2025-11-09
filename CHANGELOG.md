@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.3.1
+
+### Patch Changes
+
+- 2373035: remove d.ts file not supported
+
 ## 2.3.0
 
 ### Minor Changes
