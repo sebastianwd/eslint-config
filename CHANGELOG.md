@@ -1,5 +1,11 @@
 # @swd/eslint-config
 
+## 2.3.0
+
+### Minor Changes
+
+- 86fdb55: update deps, remove nextjs config
+
 ## 2.2.0
 
 ### Minor Changes
