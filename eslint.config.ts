@@ -1,8 +1,8 @@
-import tseslint, { type ConfigArray } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
 import { base } from './src/flat-base'
 
-const config: ConfigArray = tseslint.config(...base, {
+const config = defineConfig(...base, {
   languageOptions: {
     parserOptions: {
       tsconfigRootDir: import.meta.dirname,
