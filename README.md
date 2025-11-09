@@ -3,19 +3,18 @@
 This is a custom eslint config for my projects. It uses the latest flat config version of eslint.
 
 - Usage:
-
   - Install: `pnpm add -D eslint prettier typescript-eslint swd-eslint-config jiti`
   - In your `eslint.config.ts`:
 
     ```ts
     import swdEslintPlugin from 'swd-eslint-config'
-    import tseslint from 'typescript-eslint'
+    import { defineConfig } from 'eslint/config'
 
-    export default tseslint.config(
+    export default defineConfig(
       ...swdEslintPlugin.configs.base,
       // if using React:
       ...swdEslintPlugin.configs.react(
-        { framework: 'next' } // optional
+        { framework: 'astro' } // optional
       )
     )
     ```
@@ -23,12 +22,12 @@ This is a custom eslint config for my projects. It uses the latest flat config v
     or the flat config with classic syntax:
 
     ```ts
-    export default tseslint.config({
+    export default defineConfig({
       extends: [
         ...swdEslintPlugin.configs.base,
         // if using React:
         ...swdEslintPlugin.configs.react(
-          { framework: 'next' } // optional
+          { framework: 'astro' } // optional
         ),
       ],
     })
@@ -65,7 +64,7 @@ This is a custom eslint config for my projects. It uses the latest flat config v
   ```json
     "pnpm": {
       "overrides": {
-        "eslint-plugin-react-hooks": "^5.0.0"
+       "eslint-plugin-react-hooks": "^7.0.1"
       }
     }
   ```

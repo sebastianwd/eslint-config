@@ -10,7 +10,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import tseslint from 'typescript-eslint'
 
 export interface ReactPluginOptions {
-  framework?: 'next' | 'expo' | 'astro'
+  framework?: 'expo' | 'astro'
   tailwindEntrypoint?: string
   tanstack?: boolean
 }
@@ -62,11 +62,6 @@ export const react = (options: ReactPluginOptions = {}): Linter.Config[] => {
         'react/prop-types': 'off',
         'react/display-name': 'warn',
         'react/button-has-type': 'warn',
-        ...(framework === 'next'
-          ? {
-              '@next/next/no-img-element': 'off',
-            }
-          : {}),
       },
     },
     {
